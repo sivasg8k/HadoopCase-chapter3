@@ -4,10 +4,32 @@
     <groupId>HadoopCaseStudies</groupId>
     <artifactId>HadoopCaseStudies</artifactId>
     <version>1.0</version>
+    <relativePath>../HadoopCaseStudies</relativePath>
   </parent>
   <groupId>HadoopCase-chapter3</groupId>
   <artifactId>HadoopCase-chapter3</artifactId>
   <name>HadoopCase-chapter3</name>
+  <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <plugins>
+ 	  <plugin>
+ 	      <groupId>org.apache.maven.plugins</groupId>
+      	  <artifactId>maven-jar-plugin</artifactId>
+      	  <version>2.4</version>
+	      <configuration>
+	        <archive>
+	          <manifest>
+	          </manifest>
+	        </archive>
+	        <descriptorRefs>
+	          <descriptorRef>jar</descriptorRef>
+	        </descriptorRefs>
+	      </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  
   <dependencies>
   	<dependency>
   		<groupId>org.apache.hadoop</groupId>
